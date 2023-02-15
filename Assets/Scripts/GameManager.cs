@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Text txtScore;
     public GameObject btnPlay;
     public GameObject imgGameOver;
+    public GameObject imgGetReady;
 
     private int score;
 
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
          
         btnPlay.SetActive(false);
         imgGameOver.SetActive(false);
+        imgGetReady.SetActive(false);
 
         Time.timeScale = 1f;
         player.enabled = true;
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseScore()
     {
+
         score++;
         txtScore.text = score.ToString();
     }
